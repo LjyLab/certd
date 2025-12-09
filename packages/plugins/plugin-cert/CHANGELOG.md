@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.15](https://github.com/certd/certd/compare/v1.37.14...v1.37.15) (2025-12-06)
+
+**Note:** Version bump only for package @certd/plugin-cert
+
+## [1.37.14](https://github.com/certd/certd/compare/v1.37.13...v1.37.14) (2025-12-02)
+
+**Note:** Version bump only for package @certd/plugin-cert
+
+## [1.37.13](https://github.com/certd/certd/compare/v1.37.12...v1.37.13) (2025-12-02)
+
+**Note:** Version bump only for package @certd/plugin-cert
+
+## [1.37.12](https://github.com/certd/certd/compare/v1.37.11...v1.37.12) (2025-11-29)
+
+### Performance Improvements
+
+* 支持证书颁发机构 LiteSSL ([6be7591](https://github.com/certd/certd/commit/6be75913324e2828d9016eb307ff2d0abbbb2191))
+
+## [1.37.11](https://github.com/certd/certd/compare/v1.37.10...v1.37.11) (2025-11-28)
+
+### Performance Improvements
+
+* ssl.com支持ecc ([b5ec047](https://github.com/certd/certd/commit/b5ec04723db48422f71041f4043002e7f5b450b1))
+
+## [1.37.10](https://github.com/certd/certd/compare/v1.37.9...v1.37.10) (2025-11-19)
+
+### Performance Improvements
+
+* 优化dokploy 部署插件，配置选择serverId ([c9709f2](https://github.com/certd/certd/commit/c9709f26981c1cc9f71c14babb204329fcae0db5))
+
+## [1.37.9](https://github.com/certd/certd/compare/v1.37.8...v1.37.9) (2025-11-19)
+
+**Note:** Version bump only for package @certd/plugin-cert
+
+## [1.37.8](https://github.com/certd/certd/compare/v1.37.7...v1.37.8) (2025-11-17)
+
+**Note:** Version bump only for package @certd/plugin-cert
+
+## [1.37.7](https://github.com/certd/certd/compare/v1.37.6...v1.37.7) (2025-11-12)
+
+### Performance Improvements
+
+* 支持使用letencrypt测试环境申请ip证书 ([86ce00a](https://github.com/certd/certd/commit/86ce00adf92ff98fead87a3eaaa6631036708f47))
+* 支持腾讯云teo dns解析 ([1d23dd2](https://github.com/certd/certd/commit/1d23dd2426bd1e4c4dfea0a9e561d665e045ba9d))
+
 ## [1.37.6](https://github.com/certd/certd/compare/v1.37.5...v1.37.6) (2025-11-10)
 
 ### Performance Improvements

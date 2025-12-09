@@ -110,7 +110,8 @@ export function getCommonColumnDefine(crudExpose: any, typeRef: any, api: any, a
       type: "dict-select",
       dict: addonTypeDictRef,
       search: {
-        show: false,
+        show: true,
+        valueChange: null,
       },
       column: {
         width: 200,
@@ -120,7 +121,14 @@ export function getCommonColumnDefine(crudExpose: any, typeRef: any, api: any, a
       },
       editForm: {
         component: {
-          disabled: false,
+          disabled: true,
+        },
+      },
+      addForm: {
+        component: {
+          disabled: compute(({ form }) => {
+            return form.type ? true : false;
+          }),
         },
       },
       form: {

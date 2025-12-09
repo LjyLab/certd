@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.15](https://github.com/certd/certd/compare/v1.37.14...v1.37.15) (2025-12-06)
+
+**Note:** Version bump only for package @certd/lib-server
+
+## [1.37.14](https://github.com/certd/certd/compare/v1.37.13...v1.37.14) (2025-12-02)
+
+**Note:** Version bump only for package @certd/lib-server
+
+## [1.37.13](https://github.com/certd/certd/compare/v1.37.12...v1.37.13) (2025-12-02)
+
+### Performance Improvements
+
+* 第三方登录允许选择logo ([bb3085e](https://github.com/certd/certd/commit/bb3085ef84201ccd2dc632ba8c5097cb00258be4))
+
+## [1.37.12](https://github.com/certd/certd/compare/v1.37.11...v1.37.12) (2025-11-29)
+
+**Note:** Version bump only for package @certd/lib-server
+
+## [1.37.11](https://github.com/certd/certd/compare/v1.37.10...v1.37.11) (2025-11-28)
+
+### Performance Improvements
+
+* 支持oidc单点登录 ([ec75afb](https://github.com/certd/certd/commit/ec75afbc44139dbe9da534d8a8c08a5b91f86d3c))
+
+## [1.37.10](https://github.com/certd/certd/compare/v1.37.9...v1.37.10) (2025-11-19)
+
+**Note:** Version bump only for package @certd/lib-server
+
+## [1.37.9](https://github.com/certd/certd/compare/v1.37.8...v1.37.9) (2025-11-19)
+
+**Note:** Version bump only for package @certd/lib-server
+
+## [1.37.8](https://github.com/certd/certd/compare/v1.37.7...v1.37.8) (2025-11-17)
+
+**Note:** Version bump only for package @certd/lib-server
+
+## [1.37.7](https://github.com/certd/certd/compare/v1.37.6...v1.37.7) (2025-11-12)
+
+**Note:** Version bump only for package @certd/lib-server
+
 ## [1.37.6](https://github.com/certd/certd/compare/v1.37.5...v1.37.6) (2025-11-10)
 
 **Note:** Version bump only for package @certd/lib-server

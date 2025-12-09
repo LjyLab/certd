@@ -1,13 +1,11 @@
 {
   "name": "@certd/jdcloud",
-  "version": "1.37.6",
+  "version": "1.37.15",
   "description": "jdcloud openApi sdk",
   "main": "./dist/bundle.js",
   "module": "./dist/bundle.js",
   "types": "./dist/d/index.d.ts",
   "scripts": {
-    "test": "cross-env NODE_CONFIG_DIR=./test/config  mocha --recursive --require babel-register",
-    "dev": "babel src --out-dir babel -w",
     "build": "rollup -c ",
     "dev-build": "npm run build",
     "pub": "npm publish"
@@ -15,7 +13,6 @@
   "author": "",
   "license": "Apache",
   "dependencies": {
-    "babel-register": "^6.26.0",
     "buffer": "^5.0.8",
     "create-hash": "^1.1.3",
     "create-hmac": "^1.1.6",
@@ -30,8 +27,6 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "config": "^1.30.0",
     "cross-env": "^5.1.4",
@@ -61,5 +56,5 @@
       "fetch"
     ]
   },
-  "gitHead": "9fcdeca6920fc7d465e2443dab4f246d279f108b"
+  "gitHead": "f2e4e59f8d1b54b835d5da43aef8b527d6a4ba0b"
 }

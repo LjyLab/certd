@@ -57,6 +57,7 @@ export default {
   passwordPlaceholder: "Please enter your password",
   mobilePlaceholder: "Please enter your mobile number",
   loginButton: "Log In",
+  bindButton: "Bind Account",
   forgotPassword: "Forgot password?",
   forgotAdminPassword: "Forgot admin password?",
   registerLink: "Register",
@@ -83,4 +84,6 @@ export default {
   phoneNumber: "Phone Number",
   changePassword: "Change Password",
   updateProfile: "Update Profile",
+  oauthLoginTitle: "Other ways of login",
+  oauthOnlyLoginTitle: "Login",
 };

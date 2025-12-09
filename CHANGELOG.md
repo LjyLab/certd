@@ -3,6 +3,105 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.15](https://github.com/certd/certd/compare/v1.37.14...v1.37.15) (2025-12-06)
+
+### Bug Fixes
+
+* oidc 支持nonce ([a5ca411](https://github.com/certd/certd/commit/a5ca41131b308b36b17ca359d9709ea8e9b7cee1))
+
+### Performance Improvements
+
+* 第三方登录支持gitee ([5cee7d4](https://github.com/certd/certd/commit/5cee7d44f17bd36972f477bc1f270999da558d05))
+* 邮件模版安全优化 ([adca151](https://github.com/certd/certd/commit/adca151e4f07a4c6a2a753bfa48ee0d4d6469fd2))
+* 支持部署到中国移动CDN ([4351304](https://github.com/certd/certd/commit/43513049beff407558d2a234415521464165cebc))
+* 支持k8s apply ([d55954a](https://github.com/certd/certd/commit/d55954a36391ebe6a9397ff7dcfb710193ac5e34))
+
+## [1.37.14](https://github.com/certd/certd/compare/v1.37.13...v1.37.14) (2025-12-02)
+
+### Bug Fixes
+
+* 修复注销登录时，第三方登录注销请求失败的报错 ([677e110](https://github.com/certd/certd/commit/677e1101e6cf4451abd8a876cc1d0ddd26a10b88))
+
+## [1.37.13](https://github.com/certd/certd/compare/v1.37.12...v1.37.13) (2025-12-02)
+
+### Bug Fixes
+
+* 修复西部数据返回信息乱码问题 ([78b1650](https://github.com/certd/certd/commit/78b1650bdb071c858b3f90d53a700d11ee6de328))
+* 修复西部数码使用域名级别的key申请证书失败的问题 ([5edc72d](https://github.com/certd/certd/commit/5edc72d47550b8e3364dabda70a41cce75d87956))
+
+### Performance Improvements
+
+* 第三方登录允许选择logo ([bb3085e](https://github.com/certd/certd/commit/bb3085ef84201ccd2dc632ba8c5097cb00258be4))
+* 支持OIDC单点登录 ([fbf12f1](https://github.com/certd/certd/commit/fbf12f16b5eaa7676fd41923587bf6bd2595adba))
+
+## [1.37.12](https://github.com/certd/certd/compare/v1.37.11...v1.37.12) (2025-11-29)
+
+### Bug Fixes
+
+* 修复waf tls版本号小写 ([0adcc6a](https://github.com/certd/certd/commit/0adcc6a8d194469be0c26940ed4837fb34929b68))
+
+### Performance Improvements
+
+* 支持微信扫码登录 ([73325aa](https://github.com/certd/certd/commit/73325aaefb0e750a22aaac40929e7bf3f5864996))
+* 支持证书颁发机构 LiteSSL ([6be7591](https://github.com/certd/certd/commit/6be75913324e2828d9016eb307ff2d0abbbb2191))
+
+## [1.37.11](https://github.com/certd/certd/compare/v1.37.10...v1.37.11) (2025-11-28)
+
+### Bug Fixes
+
+* 修复阿里云 waf tlsVersion参数缺失导致部署失败的问题 ([2fabee6](https://github.com/certd/certd/commit/2fabee647acf64afe689f5bea3603028cd0ba4a2))
+* 修复备注撑开表格行高的bug ([c7b298c](https://github.com/certd/certd/commit/c7b298c46f0d52b43bd2bb17b374e7970a446446))
+* 修复域名管理无法创建tencent-eo dns授权的bug ([3406bb5](https://github.com/certd/certd/commit/3406bb5a4a56bb310cddc1a1f410c70909fd129b))
+* openapi 成功后失败都返回msg ([6e735bb](https://github.com/certd/certd/commit/6e735bbd1e29712e939f775a4db974db70e3b4b0))
+
+### Performance Improvements
+
+*  ssh支持ppk格式私钥 ([575ae16](https://github.com/certd/certd/commit/575ae164c863d0b1f9fa0890549a2ee7472fb469))
+* 优化宝塔网站证书在并发部署时导致nginx配置文件错乱的问题 ([51cc084](https://github.com/certd/certd/commit/51cc08411fd2dbab66d769b495dc1b0bf2f2578c))
+* 优化天翼云cdn 等待5秒部署完成 ([53c88ad](https://github.com/certd/certd/commit/53c88ad5afe66a3f7c38b9b759747918913a4edc))
+* 支持oidc单点登录 ([ec75afb](https://github.com/certd/certd/commit/ec75afbc44139dbe9da534d8a8c08a5b91f86d3c))
+* ssl.com支持ecc ([b5ec047](https://github.com/certd/certd/commit/b5ec04723db48422f71041f4043002e7f5b450b1))
+
+## [1.37.10](https://github.com/certd/certd/compare/v1.37.9...v1.37.10) (2025-11-19)
+
+### Performance Improvements
+
+* 优化dokploy 部署插件，配置选择serverId ([c9709f2](https://github.com/certd/certd/commit/c9709f26981c1cc9f71c14babb204329fcae0db5))
+* 站点证书监控备注输入框改成textarea ([70b603d](https://github.com/certd/certd/commit/70b603d601c34f39148c2ab70c655c51babf563d))
+
+## [1.37.9](https://github.com/certd/certd/compare/v1.37.8...v1.37.9) (2025-11-19)
+
+### Bug Fixes
+
+* 商用证书上传保存失败的bug ([075b1dc](https://github.com/certd/certd/commit/075b1dc0eb8c39acc277277b1b334d66b6717ab2))
+
+### Performance Improvements
+
+* 优化阿里云clb 过期证书清理报错的问题 ([d465367](https://github.com/certd/certd/commit/d4653678b2e3643460f918992eeae4044d3a1cc7))
+
+## [1.37.8](https://github.com/certd/certd/compare/v1.37.7...v1.37.8) (2025-11-17)
+
+### Bug Fixes
+
+* **plugins/woai-cdn:** 修正默认接口域名与帮助链接中的路径 ([#576](https://github.com/certd/certd/issues/576)) @LjyLab ([d20046c](https://github.com/certd/certd/commit/d20046c86681ea177ece434423b7c81a76b437fb))
+
+### Performance Improvements
+
+* 修复西数解析记录添加失败的bug，支持部署证书到西数虚拟主机 ([1102952](https://github.com/certd/certd/commit/1102952b4703e8c0bbc17b0700c0ed3ef6f866d3))
+* 支持回车键触发登录 ([eb5c88f](https://github.com/certd/certd/commit/eb5c88fbb2901f1a9669429a7cd8dc76f6806d01))
+
+## [1.37.7](https://github.com/certd/certd/compare/v1.37.6...v1.37.7) (2025-11-12)
+
+### Bug Fixes
+
+* 修复点击立即触发运行报错的bug ([e1eef01](https://github.com/certd/certd/commit/e1eef013a856d26fe80a05d9ec6e505e2e31e5f9))
+* 账号绑定页面某些情况下打不开的bug ([44973eb](https://github.com/certd/certd/commit/44973ebd00e89c0fee8f3b91174157757ce0160f))
+
+### Performance Improvements
+
+* 支持使用letencrypt测试环境申请ip证书 ([86ce00a](https://github.com/certd/certd/commit/86ce00adf92ff98fead87a3eaaa6631036708f47))
+* 支持腾讯云teo dns解析 ([1d23dd2](https://github.com/certd/certd/commit/1d23dd2426bd1e4c4dfea0a9e561d665e045ba9d))
+
 ## [1.37.6](https://github.com/certd/certd/compare/v1.37.5...v1.37.6) (2025-11-10)
 
 ### Bug Fixes

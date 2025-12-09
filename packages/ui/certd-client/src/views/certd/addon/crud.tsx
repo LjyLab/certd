@@ -5,7 +5,12 @@ import { AddReq, CreateCrudOptionsProps, CreateCrudOptionsRet, DelReq, EditReq, 
 export default function ({ crudExpose, context }: CreateCrudOptionsProps): CreateCrudOptionsRet {
   const api = context.api;
   const addonType = context.addonType;
+  const type = context.type;
   const pageRequest = async (query: UserPageQuery): Promise<UserPageRes> => {
+    if (query.query?.body) {
+      delete query.query.body;
+    }
+
     return await api.GetList(query);
   };
   const editRequest = async (req: EditReq) => {
@@ -35,6 +40,12 @@ export default function ({ crudExpose, context }: CreateCrudOptionsProps): Creat
         editRequest,
         delRequest,
       },
+      search: {
+        initialForm: {
+          addonType: addonType,
+          type: type,
+        },
+      },
       form: {
         labelCol: {
           //固定label宽度
@@ -42,6 +53,12 @@ export default function ({ crudExpose, context }: CreateCrudOptionsProps): Creat
           style: {
             width: "145px",
           },
+        },
+      },
+      addForm: {
+        initialForm: {
+          addonType: addonType,
+          type: type,
         },
       },
       rowHandle: {

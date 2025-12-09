@@ -1,6 +1,6 @@
 <template>
   <div class="addon-selector">
-    <div class="flex-o w-100">
+    <div class="flex-o w-100 inner">
       <!--      <fs-dict-select class="flex-1" :value="modelValue" :dict="optionsDictRef" :disabled="disabled" :render-label="renderLabel" :slots="selectSlots" :allow-clear="true" v-bind="select" @update:value="onChange" />-->
       <span v-if="modelValue" class="mr-5 cd-flex-inline">
         <a-tag class="mr-5" color="green">{{ target?.name || modelValue }}</a-tag>
@@ -82,6 +82,7 @@ function createCrudOptionsWithApi(opts: any) {
   opts.context = {
     api,
     addonType: props.addonType,
+    type: props.type,
   };
   return createCrudOptions(opts);
 }
@@ -174,5 +175,9 @@ async function doRefresh() {
 <style lang="less">
 .addon-selector {
   width: 100%;
+  .inner {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>

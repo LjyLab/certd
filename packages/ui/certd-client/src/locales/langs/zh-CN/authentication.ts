@@ -57,6 +57,7 @@ export default {
   passwordPlaceholder: "请输入密码",
   mobilePlaceholder: "请输入手机号",
   loginButton: "登录",
+  bindButton: "绑定账号",
   forgotPassword: "忘记密码？",
   forgotAdminPassword: "忘记管理员密码？",
   registerLink: "注册",
@@ -84,4 +85,7 @@ export default {
   phoneNumber: "手机号",
   changePassword: "修改密码",
   updateProfile: "修改个人信息",
+
+  oauthLoginTitle: "其他登录方式",
+  oauthOnlyLoginTitle: "登录",
 };

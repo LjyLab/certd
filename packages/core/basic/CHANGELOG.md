@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.15](https://github.com/certd/certd/compare/v1.37.14...v1.37.15) (2025-12-06)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.14](https://github.com/certd/certd/compare/v1.37.13...v1.37.14) (2025-12-02)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.13](https://github.com/certd/certd/compare/v1.37.12...v1.37.13) (2025-12-02)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.12](https://github.com/certd/certd/compare/v1.37.11...v1.37.12) (2025-11-29)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.11](https://github.com/certd/certd/compare/v1.37.10...v1.37.11) (2025-11-28)
+
+### Performance Improvements
+
+* 优化宝塔网站证书在并发部署时导致nginx配置文件错乱的问题 ([51cc084](https://github.com/certd/certd/commit/51cc08411fd2dbab66d769b495dc1b0bf2f2578c))
+* 优化天翼云cdn 等待5秒部署完成 ([53c88ad](https://github.com/certd/certd/commit/53c88ad5afe66a3f7c38b9b759747918913a4edc))
+* ssl.com支持ecc ([b5ec047](https://github.com/certd/certd/commit/b5ec04723db48422f71041f4043002e7f5b450b1))
+
+## [1.37.10](https://github.com/certd/certd/compare/v1.37.9...v1.37.10) (2025-11-19)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.9](https://github.com/certd/certd/compare/v1.37.8...v1.37.9) (2025-11-19)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.8](https://github.com/certd/certd/compare/v1.37.7...v1.37.8) (2025-11-17)
+
+**Note:** Version bump only for package @certd/basic
+
+## [1.37.7](https://github.com/certd/certd/compare/v1.37.6...v1.37.7) (2025-11-12)
+
+### Performance Improvements
+
+* 支持使用letencrypt测试环境申请ip证书 ([86ce00a](https://github.com/certd/certd/commit/86ce00adf92ff98fead87a3eaaa6631036708f47))
+
 ## [1.37.6](https://github.com/certd/certd/compare/v1.37.5...v1.37.6) (2025-11-10)
 
 **Note:** Version bump only for package @certd/basic

@@ -99,26 +99,38 @@ export class AliyunDeployCertToALB extends AbstractTaskPlugin {
 
 
   @TaskInput({
-      title: "部署证书类型",
-      value: "default",
-      component: {
-        name: "a-select",
-        vModel: "value",
-        options: [
-          {
-            label: "默认证书",
-            value: "default"
-          },
-          {
-            label: "扩展证书",
-            value: "extension"
-          }
-        ]
-      },
-      required: true
-    }
+    title: "部署证书类型",
+    value: "default",
+    component: {
+      name: "a-select",
+      vModel: "value",
+      options: [
+        {
+          label: "默认证书",
+          value: "default"
+        },
+        {
+          label: "扩展证书",
+          value: "extension"
+        }
+      ]
+    },
+    required: true
+  }
   )
   deployType: string = "default";
+
+  @TaskInput({
+    title: "是否清理过期证书",
+    value: true,
+    component: {
+      name: "a-switch",
+      vModel: "checked",
+    },
+    required: true
+  }
+  )
+  clearExpiredCert: boolean;
 
 
   async onInstance() {
@@ -155,12 +167,17 @@ export class AliyunDeployCertToALB extends AbstractTaskPlugin {
       const client = await this.getLBClient(access, this.regionId);
       await this.deployDefaultCert(certId, client);
     }
-
-    await this.ctx.utils.sleep(10000)
-    for (const listener of this.listeners) {
-      await this.clearInvalidCert(albClientV2, listener);
+    if (this.clearExpiredCert!==false) {
+      this.logger.info(`准备开始清理过期证书`);
+      await this.ctx.utils.sleep(30000)
+      for (const listener of this.listeners) {
+        try {
+          await this.clearInvalidCert(albClientV2, listener);
+        } catch (e) {
+          this.logger.error(`清理监听器${listener}的过期证书失败`, e);
+        }
+      }
     }
-
 
     this.logger.info("执行完成");
   }
@@ -236,18 +253,21 @@ export class AliyunDeployCertToALB extends AbstractTaskPlugin {
 
     const certIds = [];
     for (const item of list) {
+      this.logger.info(`监听器${listener}绑定的证书${item.CertificateId},status:${item.Status},IsDefault:${item.IsDefault}`);
       if (item.Status !== "Associated") {
         continue;
       }
       if (item.IsDefault) {
         continue;
       }
-      certIds.push( parseInt(item.CertificateId));
+      certIds.push(parseInt(item.CertificateId));
     }
+    this.logger.info(`监听器${listener}绑定的证书${certIds}`);
     //检查是否过期，过期则删除
     const invalidCertIds = [];
     for (const certId of certIds) {
       const res = await sslClient.getCertInfo(certId);
+      this.logger.info(`证书${certId}过期时间:${res.notAfter}`);
       if (res.notAfter < new Date().getTime()) {
         invalidCertIds.push(certId);
       }
@@ -256,7 +276,7 @@ export class AliyunDeployCertToALB extends AbstractTaskPlugin {
       this.logger.info(`监听器${listener}没有过期的证书`);
       return
     }
-    this.logger.info(`开始解绑过期的证书:${invalidCertIds}`);
+    this.logger.info(`开始解绑过期的证书:${invalidCertIds}，listener:${listener}`);
     await client.doRequest({
       // 接口名称
       action: "DissociateAdditionalCertificatesFromListener",

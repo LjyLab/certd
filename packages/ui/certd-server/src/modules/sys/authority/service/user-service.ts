@@ -1,6 +1,6 @@
 import { Inject, Provide, Scope, ScopeEnum } from '@midwayjs/core';
 import { InjectEntityModel } from '@midwayjs/typeorm';
-import {In, MoreThan, Not, Repository} from 'typeorm';
+import {EntityManager, In, MoreThan, Not, Repository} from 'typeorm';
 import { UserEntity } from '../entity/user.js';
 import * as _ from 'lodash-es';
 import { BaseService, CommonException, Constants, FileService, SysInstallInfo, SysSettingsService } from '@certd/lib-server';
@@ -171,7 +171,7 @@ export class UserService extends BaseService<UserEntity> {
     return await this.roleService.getPermissionByRoleIds(roleIds);
   }
 
-  async register(type: string, user: UserEntity) {
+  async register(type: string, user: UserEntity,withTx?:(tx: EntityManager)=>Promise<void>) {
     if (!user.password) {
       user.password = simpleNanoId();
     }
@@ -225,8 +225,13 @@ export class UserService extends BaseService<UserEntity> {
 
     await this.transaction(async txManager => {
       newUser = await txManager.save(newUser);
+      user.id = newUser.id;
       const userRole: UserRoleEntity = UserRoleEntity.of(newUser.id, Constants.role.defaultUser);
       await txManager.save(userRole);
+
+      if(withTx) {
+        await withTx(txManager);
+      }
     });
 
     delete newUser.password;

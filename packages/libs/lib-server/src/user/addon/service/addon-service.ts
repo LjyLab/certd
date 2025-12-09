@@ -76,7 +76,7 @@ export class AddonService extends BaseService<AddonEntity> {
 
 
   getDefineList(addonType: string) {
-    return addonRegistry.getDefineList();
+    return addonRegistry.getDefineList(addonType);
   }
 
   getDefineByType(type: string, prefix?: string) {
@@ -186,5 +186,15 @@ export class AddonService extends BaseService<AddonEntity> {
       isDefault: true
     });
     return this.buildAddonInstanceConfig(res);
+  }
+
+  async getOneByType(req:{addonType:string,type:string,userId:number}) {
+    return await this.repository.findOne({
+      where: {
+        addonType: req.addonType,
+        type: req.type,
+        userId: req.userId
+      }
+    });
   }
 }

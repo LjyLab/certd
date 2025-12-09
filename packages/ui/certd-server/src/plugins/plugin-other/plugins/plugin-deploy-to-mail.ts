@@ -1,6 +1,7 @@
 import {AbstractTaskPlugin, FileItem, IsTaskPlugin, pluginGroups, RunStrategy, TaskInput} from '@certd/pipeline';
 import {CertInfo, CertReader} from "@certd/plugin-cert";
 import dayjs from "dayjs";
+import { get } from 'lodash-es';
 
 @IsTaskPlugin({
   name: 'DeployCertToMailPlugin',
@@ -176,11 +177,13 @@ export class DeployCertToMailPlugin extends AbstractTaskPlugin {
     })
   }
 
-  compile(templateString:string) {
-    return new Function('data', `    with(data || {}) {
-        return \`${templateString}\`;
-      }
-    `);
+  compile(templateString: string) {
+    return function(data) {
+      return templateString.replace(/\${(.*?)}/g, (match, key) => {
+        const value = get(data, key, '');
+        return String(value);
+      });
+    };
   }
 }
 new DeployCertToMailPlugin();

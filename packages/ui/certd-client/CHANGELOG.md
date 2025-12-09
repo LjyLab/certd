@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.15](https://github.com/certd/certd/compare/v1.37.14...v1.37.15) (2025-12-06)
+
+### Performance Improvements
+
+* 第三方登录支持gitee ([5cee7d4](https://github.com/certd/certd/commit/5cee7d44f17bd36972f477bc1f270999da558d05))
+
+## [1.37.14](https://github.com/certd/certd/compare/v1.37.13...v1.37.14) (2025-12-02)
+
+### Bug Fixes
+
+* 修复注销登录时，第三方登录注销请求失败的报错 ([677e110](https://github.com/certd/certd/commit/677e1101e6cf4451abd8a876cc1d0ddd26a10b88))
+
+## [1.37.13](https://github.com/certd/certd/compare/v1.37.12...v1.37.13) (2025-12-02)
+
+### Performance Improvements
+
+* 第三方登录允许选择logo ([bb3085e](https://github.com/certd/certd/commit/bb3085ef84201ccd2dc632ba8c5097cb00258be4))
+* 支持OIDC单点登录 ([fbf12f1](https://github.com/certd/certd/commit/fbf12f16b5eaa7676fd41923587bf6bd2595adba))
+
+## [1.37.12](https://github.com/certd/certd/compare/v1.37.11...v1.37.12) (2025-11-29)
+
+### Performance Improvements
+
+* 支持微信扫码登录 ([73325aa](https://github.com/certd/certd/commit/73325aaefb0e750a22aaac40929e7bf3f5864996))
+* 支持证书颁发机构 LiteSSL ([6be7591](https://github.com/certd/certd/commit/6be75913324e2828d9016eb307ff2d0abbbb2191))
+
+## [1.37.11](https://github.com/certd/certd/compare/v1.37.10...v1.37.11) (2025-11-28)
+
+### Bug Fixes
+
+* 修复备注撑开表格行高的bug ([c7b298c](https://github.com/certd/certd/commit/c7b298c46f0d52b43bd2bb17b374e7970a446446))
+* 修复域名管理无法创建tencent-eo dns授权的bug ([3406bb5](https://github.com/certd/certd/commit/3406bb5a4a56bb310cddc1a1f410c70909fd129b))
+
+### Performance Improvements
+
+* 优化天翼云cdn 等待5秒部署完成 ([53c88ad](https://github.com/certd/certd/commit/53c88ad5afe66a3f7c38b9b759747918913a4edc))
+* 支持oidc单点登录 ([ec75afb](https://github.com/certd/certd/commit/ec75afbc44139dbe9da534d8a8c08a5b91f86d3c))
+
+## [1.37.10](https://github.com/certd/certd/compare/v1.37.9...v1.37.10) (2025-11-19)
+
+### Performance Improvements
+
+* 站点证书监控备注输入框改成textarea ([70b603d](https://github.com/certd/certd/commit/70b603d601c34f39148c2ab70c655c51babf563d))
+
+## [1.37.9](https://github.com/certd/certd/compare/v1.37.8...v1.37.9) (2025-11-19)
+
+### Bug Fixes
+
+* 商用证书上传保存失败的bug ([075b1dc](https://github.com/certd/certd/commit/075b1dc0eb8c39acc277277b1b334d66b6717ab2))
+
+## [1.37.8](https://github.com/certd/certd/compare/v1.37.7...v1.37.8) (2025-11-17)
+
+### Performance Improvements
+
+* 支持回车键触发登录 ([eb5c88f](https://github.com/certd/certd/commit/eb5c88fbb2901f1a9669429a7cd8dc76f6806d01))
+
+## [1.37.7](https://github.com/certd/certd/compare/v1.37.6...v1.37.7) (2025-11-12)
+
+### Bug Fixes
+
+* 修复点击立即触发运行报错的bug ([e1eef01](https://github.com/certd/certd/commit/e1eef013a856d26fe80a05d9ec6e505e2e31e5f9))
+* 账号绑定页面某些情况下打不开的bug ([44973eb](https://github.com/certd/certd/commit/44973ebd00e89c0fee8f3b91174157757ce0160f))
+
 ## [1.37.6](https://github.com/certd/certd/compare/v1.37.5...v1.37.6) (2025-11-10)
 
 ### Bug Fixes

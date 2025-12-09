@@ -31,6 +31,7 @@ export type AddonDefine = Registrable & {
     [key: string]: AddonInputDefine;
   };
   showTest?: boolean;
+  icon?: string;
 };
 
 export type AddonInstanceConfig = {
@@ -64,6 +65,7 @@ export abstract class BaseAddon implements IAddon {
   http!: HttpClient;
   logger!: ILogger;
 
+  title!: string;
 
 
 

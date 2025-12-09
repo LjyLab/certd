@@ -55,7 +55,6 @@
           </a-form-item>
         </template>
       </template>
-
       <a-form-item label=" " :colon="false" :wrapper-col="{ span: 16 }">
         <a-button :loading="saveLoading" type="primary" html-type="submit">{{ t("certd.saveButton") }}</a-button>
       </a-form-item>
@@ -64,14 +63,13 @@
 </template>
 
 <script setup lang="tsx">
-import { reactive, ref, Ref } from "vue";
-import { GetSmsTypeDefine, SysSettings } from "/@/views/sys/settings/api";
-import * as api from "/@/views/sys/settings/api";
-import { merge } from "lodash-es";
-import { useSettingStore } from "/@/store/settings";
 import { notification } from "ant-design-vue";
+import { merge } from "lodash-es";
+import { reactive, ref, Ref } from "vue";
+import { useSettingStore } from "/@/store/settings";
+import * as api from "/@/views/sys/settings/api";
+import { SysSettings } from "/@/views/sys/settings/api";
 import { useI18n } from "/src/locales";
-
 const { t } = useI18n();
 
 defineOptions({
@@ -191,6 +189,13 @@ const onFinish = async (form: any) => {
 };
 </script>
 <style lang="less">
-.sys-settings-site {
+.sys-settings-register {
+  width: 1000px !important;
+
+  .addon-selector {
+    .inner {
+      justify-content: space-between;
+    }
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 {
   "name": "@certd/basic",
   "private": false,
-  "version": "1.37.6",
+  "version": "1.37.15",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -17,6 +17,7 @@
     "compile": "tsc --skipLibCheck --watch"
   },
   "dependencies": {
+    "async-lock": "^1.4.1",
     "axios": "^1.7.2",
     "dayjs": "^1.11.7",
     "http-proxy-agent": "^7.0.2",
@@ -46,5 +47,5 @@
     "tslib": "^2.8.1",
     "typescript": "^5.4.2"
   },
-  "gitHead": "9fcdeca6920fc7d465e2443dab4f246d279f108b"
+  "gitHead": "f2e4e59f8d1b54b835d5da43aef8b527d6a4ba0b"
 }
